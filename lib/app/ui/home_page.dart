@@ -7,7 +7,7 @@ class HomePage extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('HomePage'),
+        title: Text('Wall Street Bets'),
       ),
       body: Container(
         child: GetX<HomeController>(
