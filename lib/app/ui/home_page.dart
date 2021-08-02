@@ -20,8 +20,8 @@ class HomePage extends GetView<HomeController> {
               : ListView.builder(
                 itemBuilder: (contex, index) {
                   return ListTile(
-                    title: Text(_.postList[index].title),
-                    subtitle: Text(_.postList[index].body),
+                    title: Text((index+1).toString() + '° - ' + _.postList[index].ticker),
+                    subtitle: Text(_.postList[index].sentiment),
                   );
                 },
                 itemCount: _.postList.length,

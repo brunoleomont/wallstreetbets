@@ -14,5 +14,6 @@ void main() {
       initialBinding: HomeBinding(),
       getPages: AppPages.routes,
       home: HomePage(),
+      debugShowCheckedModeBanner: false,
     ));
 }

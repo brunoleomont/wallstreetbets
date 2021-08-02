@@ -1,20 +1,24 @@
 class Post {
-  int id = 0;
-  String title = '';
-  String body = '';
+  String ticker = '';
+  String sentiment = '';
+  int comments = 0;
+  int sentimentScore = 0;
 
-  Post({this.id = 0, this.title = '', this.body = ''});
+  Post({this.ticker = '', this.sentiment = '', this.comments = 0, this.sentimentScore = 0});
 
   Post.fromJson(Map<String, dynamic> json) {
-    this.id = json['id'];
-    this.title = json['title'];
-    this.body = json['body'];
+    this.ticker = json['ticker'];
+    this.sentiment = json['sentiment'];
+    this.comments = json['no_of_comments'];
+    this.sentimentScore = json['sentiment_score'];
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['title'] = this.title;
-    data['body'] = this.body;
+    data['ticker'] = this.ticker;
+    data['sentiment'] = this.sentiment;
+    data['no_of_comments'] = this.comments;
+    data['sentiment_score'] = this.sentimentScore;
     return data;
   }
 }

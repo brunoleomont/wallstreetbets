@@ -4,7 +4,7 @@ import 'package:get/get_rx/get_rx.dart';
 import 'package:http/http.dart' as http;
 import 'package:wallstreetbets/app/data/model/model.dart';
 
-const baseUrl = 'https://jsonplaceholder.typicode.com/posts/';
+const redditUrl = 'https://dashboard.nbshare.io/api/v1/apps/reddit';
 
 class MyApiClient {
     final http.Client httpClient;
@@ -12,7 +12,7 @@ class MyApiClient {
 
     getAll() async {
       try {
-        var response = await httpClient.get(Uri.parse(baseUrl));
+        var response = await httpClient.get(Uri.parse(redditUrl));
         if (response.statusCode == 200) {
           Iterable jsonResponse = json.decode(response.body);
           List<Post> listPosts = jsonResponse.map((post) => Post.fromJson(post)).toList();
