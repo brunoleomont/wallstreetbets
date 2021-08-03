@@ -2,7 +2,7 @@ class Post {
   String ticker = '';
   String sentiment = '';
   int comments = 0;
-  int sentimentScore = 0;
+  double sentimentScore = 0;
 
   Post({this.ticker = '', this.sentiment = '', this.comments = 0, this.sentimentScore = 0});
 
