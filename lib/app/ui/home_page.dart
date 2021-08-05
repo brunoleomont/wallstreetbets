@@ -10,6 +10,36 @@ class HomePage extends GetView<HomeController> {
       appBar: AppBar(
         title: Text('Wall Street Bets'),
         centerTitle: true,
+        actions: [
+          IconButton(
+            icon: Icon(Icons.filter_alt_sharp),
+            onPressed: () => showDialog<String>(
+                barrierDismissible: false,
+                context: context,
+                builder: (BuildContext context) => AlertDialog(
+                      title: const Text('Filter'),
+                      content: const Text('Filter by Bullish or Bearish'),
+                      actions: <Widget>[
+                        TextButton(
+                          style: TextButton.styleFrom(
+                            primary: Colors.green,
+                          ),
+                          onPressed: () => Navigator.pop(
+                              context, Get.find<HomeController>().getBull()),
+                          child: const Text('Bull First'),
+                        ),
+                        TextButton(
+                          style: TextButton.styleFrom(
+                            primary: Colors.red,
+                          ),
+                          onPressed: () => Navigator.pop(
+                              context, Get.find<HomeController>().getBear()),
+                          child: const Text('Bear First'),
+                        ),
+                      ],
+                    )),
+          ),
+        ],
       ),
       body: Container(
         child: GetX<HomeController>(initState: (state) {

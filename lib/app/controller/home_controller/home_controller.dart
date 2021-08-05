@@ -13,4 +13,12 @@ class HomeController extends GetxController {
   getAll() {
     repository.getAll().then((data) => {this.postList = data});
   }
+
+  getBull() {
+    this._postList().sort((a, b) => b.sentimentScore.compareTo(a.sentimentScore));
+  }
+
+  getBear() {
+    this._postList().sort((a, b) => a.sentimentScore.compareTo(b.sentimentScore));
+  }
 }
