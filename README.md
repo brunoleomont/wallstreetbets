@@ -45,6 +45,9 @@
 ## [](#license):memo: License
 This project is under the MIT license. See the [LICENSE](https://github.com/brunoleomont/wallstreetbets/blob/master/LICENSE) for more information.
 
+## [](#google-play):iphone: Google Play
+[Download on Google Play](https://play.google.com/store/apps/details?id=com.wallstreetbets)
+
 ----------
 
 Made with :blue_heart: by brunoleomont  👋  [Get in touch!](https://www.linkedin.com/in/brunoleomont/)
