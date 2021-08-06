@@ -1,4 +1,4 @@
-package com.example.wallstreetbets
+package com.wallstreetbets
 
 import io.flutter.embedding.android.FlutterActivity
 
